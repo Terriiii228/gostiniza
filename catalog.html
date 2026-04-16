@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Номера - Тихий Двор</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-flex">
+            <div class="logo">🏨 Тихий <span>Двор</span></div>
+            <nav>
+                <a href="index.html">Главная</a>
+                <a href="about.html">О нас</a>
+                <a href="catalog.html" class="active">Номера</a>
+                <a href="index.html#contacts">Контакты</a>
+            </nav>
+            <a href="tel:+79534375172" class="btn btn-outline">📞 +7 (953) 437-51-72</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1>Наши номера</h1>
+                <p>Выберите идеальный вариант для вашего отдыха</p>
+            </div>
+        </section>
+
+        <section class="catalog-filters">
+            <div class="container">
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">Все номера</button>
+                    <button class="filter-btn" data-filter="economy">Эконом</button>
+                    <button class="filter-btn" data-filter="standard">Стандарт</button>
+                    <button class="filter-btn" data-filter="luxury">Люкс</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="catalog-rooms">
+            <div class="container">
+                <div class="rooms-grid" id="roomsGrid">
+                    <!-- Номера будут загружены через JS -->
+                </div>
+            </div>
+        </section>
+
+        <section class="booking-section">
+            <div class="container">
+                <div class="booking-form">
+                    <h2>Забронировать номер</h2>
+                    <form id="bookingForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Ваше имя" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Телефон" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="date" id="checkin" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="date" id="checkout" required>
+                        </div>
+                        <div class="form-group">
+                            <select id="roomSelect">
+                                <option value="">Выберите номер</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn">Отправить заявку</button>
+                    </form>
+                    <div id="formMessage" class="form-message"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Отель «Тихий Двор». Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
